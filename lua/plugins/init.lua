@@ -15,7 +15,7 @@ return {
   },
 
   -- File explorer
-  { import = 'plugins.nvim-tree' },
+  { import = 'plugins.neo-tree' },
 
   -- Navigation & Search
   { import = 'plugins.telescope' },

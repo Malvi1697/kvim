@@ -27,10 +27,6 @@ return {
         -- Only restore if nvim was started without file arguments
         if vim.fn.argc() == 0 and not vim.g.started_with_stdin then
           require('persistence').load()
-          -- Always reopen nvim-tree after session restore
-          vim.schedule(function()
-            require('nvim-tree.api').tree.open()
-          end)
         end
       end,
     })
