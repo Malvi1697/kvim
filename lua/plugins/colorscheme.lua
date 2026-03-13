@@ -96,7 +96,7 @@ return {
       end
 
       -- Set default now, then restore saved theme after all plugins load
-      safe_colorscheme 'tokyonight-night'
+      safe_colorscheme 'jetdark'
       vim.api.nvim_create_autocmd('User', {
         pattern = 'LazyDone',
         once = true,
