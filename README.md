@@ -208,7 +208,7 @@ Formatting runs on save (via conform.nvim).
 
 ## Colorschemes
 
-13 themes included. Switch with Telescope or `:colorscheme <name>`. Your choice persists across sessions.
+13 themes included. Switch with `:Telescope colorscheme`. Your choice persists across sessions.
 
 Available: `jetdark` (default), `tokyonight-night`, `catppuccin`, `gruvbox`, `rose-pine`, `nightfox`, `material`, `kanagawa-paper`, `ayu`, `kanagawa`, `darcula`, `onedark`, `nordic`
 
