@@ -51,7 +51,8 @@ return {
 
   -- Jetdark theme (JetBrains-inspired)
   {
-    'Malvi1697/jetdark.nvim',
+    dir = '/Users/janvseticek/work/personal/jetdark.nvim',
+    name = 'jetdark',
     priority = 1000,
   },
 
