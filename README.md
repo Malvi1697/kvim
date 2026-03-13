@@ -58,8 +58,8 @@ Press `Space` and wait to see all available bindings via which-key.
 | `<C-h/j/k/l>` | n/t | Navigate between windows |
 | `<A-h/j/k/l>` | n/t | Resize splits |
 | `<Esc><Esc>` | t | Exit terminal mode |
-| `<leader>e` | n | Toggle file explorer |
-| `<leader>r` | n | Locate file in explorer |
+| `<leader>e` | n | Toggle file explorer (Neo-tree) |
+| `<leader>r` | n | Reveal file in explorer |
 | `<leader>q` | n | Open diagnostic quickfix list |
 | `<leader>?` | n | Show all keymaps |
 | `<leader>sh` | n | Horizontal split (empty) |
@@ -135,6 +135,7 @@ Avante.nvim is available via `:Avante` commands (uses Copilot backend).
 | Key | Mode | Action |
 |-----|------|--------|
 | `<C-\>` | n/t | Toggle floating terminal |
+| `<leader>tt` | n | Terminal in current window |
 | `<leader>ts` | n | Terminal in horizontal split |
 | `<leader>tv` | n | Terminal in vertical split |
 | `<M-CR>` | t | Send Shift+Enter (for Claude CLI) |
