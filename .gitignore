@@ -1,0 +1,17 @@
+# Neovim generated
+tags
+spell/
+.luarc.json
+
+# Temporary files
+temp/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+
+# Local/tool config
+.claude/
+plugin/
