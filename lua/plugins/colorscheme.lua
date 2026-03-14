@@ -74,6 +74,15 @@ return {
     priority = 1000,
   },
 
+  -- Teide theme (tokyonight fork with different palette: darker, dark, dimmed, light)
+  {
+    'serhez/teide.nvim',
+    priority = 1000,
+    opts = {
+      styles = { comments = { italic = false } },
+    },
+  },
+
   -- Tokyo Night theme + colorscheme persistence
   {
     'folke/tokyonight.nvim',

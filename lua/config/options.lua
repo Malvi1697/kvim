@@ -31,6 +31,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
+vim.o.autoread = true
 vim.o.sessionoptions = 'curdir,folds,help,tabpages,winsize'
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
