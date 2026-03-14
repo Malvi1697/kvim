@@ -5,13 +5,7 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'SmiteshP/nvim-navic' },
-    opts = {
-      winbar = {
-        lualine_c = {
-          { 'navic', color_correction = 'static' },
-        },
-      },
-    },
+    opts = {},
   },
 
   -- File explorer
@@ -21,6 +15,7 @@ return {
   { import = 'plugins.telescope' },
   { import = 'plugins.hop' },
   { import = 'plugins.which-key' },
+  { import = 'plugins.spectre' },
 
   -- Syntax & Treesitter
   { import = 'plugins.treesitter' },
@@ -43,7 +38,12 @@ return {
   -- AI
   { import = 'plugins.copilot' },
   { import = 'plugins.claude' },
-  { import = 'plugins.avante' },
+
+  -- Mini modules
+  { import = 'plugins.mini' },
+
+  -- Tabs
+  { import = 'plugins.bufferline' },
 
   -- Themes & Appearance
   { import = 'plugins.colorscheme' },

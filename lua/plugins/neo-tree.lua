@@ -5,12 +5,27 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
+    {
+      's1n7ax/nvim-window-picker',
+      version = '2.*',
+      opts = {
+        hint = 'floating-big-letter',
+        filter_rules = {
+          bo = { filetype = { 'neo-tree', 'neo-tree-popup', 'notify' }, buftype = { 'terminal', 'quickfix' } },
+        },
+      },
+    },
   },
   keys = {
     { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Toggle file explorer', silent = true },
     { '<leader>r', '<cmd>Neotree reveal<CR>', desc = 'Locate file in explorer', silent = true },
   },
   opts = {
+    git_status_async = true,
+    filesystem = {
+      use_libuv_file_watcher = true,
+      async_directory_scan = 'always',
+    },
     window = {
       width = 50,
       mappings = {
@@ -37,7 +52,7 @@ return {
             end
           end
         end,
-        ['l'] = 'open',
+        ['l'] = 'open_with_window_picker',
         ['o'] = 'open',
         ['O'] = 'order_by_type',
         ['<space>'] = 'noop',

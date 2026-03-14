@@ -1,21 +1,44 @@
--- nvim v0.8.0
+local float_opts = {
+  border = 'curved',
+  width = function() return math.floor(vim.o.columns * 0.85) end,
+  height = function() return math.floor(vim.o.lines * 0.85) end,
+}
+
+local lazygit, lazyglab
+
 return {
-  'kdheepak/lazygit.nvim',
-  lazy = true,
-  cmd = {
-    'LazyGit',
-    'LazyGitConfig',
-    'LazyGitCurrentFile',
-    'LazyGitFilter',
-    'LazyGitFilterCurrentFile',
-  },
-  -- optional for floating window border decoration
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-  },
-  -- setting the keybinding for LazyGit with 'keys' is recommended in
-  -- order to load the plugin when the command is run for the first time
+  'akinsho/toggleterm.nvim',
   keys = {
-    { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+    {
+      '<leader>lg',
+      function()
+        if not lazygit then
+          lazygit = require('toggleterm.terminal').Terminal:new({
+            cmd = 'lazygit',
+            direction = 'float',
+            float_opts = float_opts,
+            on_open = function() vim.cmd('startinsert!') end,
+          })
+        end
+        vim.cmd('silent! wa')
+        lazygit:toggle()
+      end,
+      desc = 'LazyGit',
+    },
+    {
+      '<leader>ll',
+      function()
+        if not lazyglab then
+          lazyglab = require('toggleterm.terminal').Terminal:new({
+            cmd = 'lazyglab',
+            direction = 'float',
+            float_opts = float_opts,
+            on_open = function() vim.cmd('startinsert!') end,
+          })
+        end
+        lazyglab:toggle()
+      end,
+      desc = 'LazyGlab',
+    },
   },
 }

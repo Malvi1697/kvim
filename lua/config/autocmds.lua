@@ -42,6 +42,16 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 })
 vim.api.nvim_set_hl(0, 'WinSeparator', { fg = '#565f89', bold = true })
 
+-- Autosave on focus loss or buffer leave
+vim.api.nvim_create_autocmd({ 'BufLeave', 'WinLeave', 'FocusLost' }, {
+  group = vim.api.nvim_create_augroup('autosave', { clear = true }),
+  callback = function()
+    if vim.bo.modified and vim.bo.buftype == '' and vim.fn.expand('%') ~= '' then
+      vim.cmd('silent! write')
+    end
+  end,
+})
+
 -- Cursorline only in focused split
 local focus_group = vim.api.nvim_create_augroup('focus-active-window', { clear = true })
 vim.api.nvim_create_autocmd({ 'WinEnter', 'BufWinEnter' }, {
