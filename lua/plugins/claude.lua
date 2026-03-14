@@ -1,24 +1,24 @@
+local claude_term
+
 return {
-  'greggh/claude-code.nvim',
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  'akinsho/toggleterm.nvim',
   keys = {
-    { '<leader>ac', '<cmd>ClaudeCode<cr>', desc = 'Toggle Claude Code' },
-    { '<leader>aC', '<cmd>ClaudeCodeDangerous<cr>', desc = 'Toggle Claude Code (skip permissions)' },
-  },
-  opts = {
-    window = {
-      position = 'vertical botright',
-      split_ratio = 0.4,
-    },
-    command_variants = {
-      dangerous = '--dangerously-skip-permissions',
-    },
-    keymaps = {
-      toggle = {
-        variants = {
-          dangerous = '<leader>aC',
-        },
-      },
+    {
+      '<leader>ac',
+      function()
+        if not claude_term then
+          claude_term = require('toggleterm.terminal').Terminal:new({
+            cmd = 'claude',
+            direction = 'vertical',
+            on_open = function()
+              vim.cmd('startinsert!')
+              vim.cmd('vertical resize ' .. math.floor(vim.o.columns * 0.4))
+            end,
+          })
+        end
+        claude_term:toggle()
+      end,
+      desc = 'Toggle Claude Code',
     },
   },
 }
