@@ -50,6 +50,7 @@ return {
   { import = 'plugins.todo-comments' },
   { import = 'plugins.navic' },
   { import = 'plugins.render-markdown' },
+  { import = 'plugins.markdown-preview' },
 
   -- Terminal
   { import = 'plugins.toggleterm' },
