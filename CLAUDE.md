@@ -49,4 +49,4 @@ LSP servers, formatters, and linters are installed via Mason (`:Mason` inside nv
 
 ## Colorscheme
 
-13 themes installed. Default is `tokyonight-night`. The last selected theme is persisted to `stdpath('data')/last_colorscheme`.
+14 themes installed. Default is `jetdark`. The last selected theme is persisted to `stdpath('data')/last_colorscheme`.

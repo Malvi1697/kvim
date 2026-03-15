@@ -58,7 +58,7 @@ Press `Space` and wait to see all available bindings via which-key.
 | `<C-h/j/k/l>` | n/t | Navigate between windows |
 | `<A-h/j/k/l>` | n/t | Resize splits |
 | `<Esc><Esc>` | t | Exit terminal mode |
-| `<leader>e` | n | Toggle file explorer (Neo-tree) |
+| `<leader>e` | n | Toggle file explorer (nvim-tree) |
 | `<leader>r` | n | Reveal file in explorer |
 | `<leader>q` | n | Open diagnostic quickfix list |
 | `<leader>?` | n | Show all keymaps |
@@ -126,9 +126,6 @@ Press `Space` and wait to see all available bindings via which-key.
 | `<Tab>` | i | Accept Copilot suggestion (or indent) |
 | `<M-]>` / `<M-[>` | i | Next / previous Copilot suggestion |
 | `<leader>ac` | n | Toggle Claude Code terminal |
-| `<leader>aC` | n | Toggle Claude Code (skip permissions) |
-
-Avante.nvim is available via `:Avante` commands (uses Copilot backend).
 
 ### Terminal
 
@@ -209,9 +206,9 @@ Formatting runs on save (via conform.nvim).
 
 ## Colorschemes
 
-13 themes included. Switch with `:Telescope colorscheme`. Your choice persists across sessions.
+14 themes included. Switch with `:Telescope colorscheme`. Your choice persists across sessions.
 
-Available: `jetdark` (default), `tokyonight-night`, `catppuccin`, `gruvbox`, `rose-pine`, `nightfox`, `material`, `kanagawa-paper`, `ayu`, `kanagawa`, `darcula`, `onedark`, `nordic`
+Available: `jetdark` (default), `tokyonight-night`, `catppuccin`, `gruvbox`, `rose-pine`, `nightfox`, `material`, `kanagawa-paper`, `ayu`, `kanagawa`, `darcula`, `onedark`, `nordic`, `teide`
 
 ## License
 
