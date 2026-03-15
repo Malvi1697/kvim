@@ -92,3 +92,12 @@ vim.api.nvim_create_autocmd('WinLeave', {
   end,
 })
 
+-- Show navic breadcrumbs in winbar
+vim.api.nvim_create_autocmd({ 'BufWinEnter', 'BufWritePost', 'CursorMoved' }, {
+  group = vim.api.nvim_create_augroup('navic-winbar', { clear = true }),
+  callback = function()
+    if vim.bo.buftype == '' and package.loaded['nvim-navic'] and require('nvim-navic').is_available() then
+      vim.wo.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+    end
+  end,
+})
