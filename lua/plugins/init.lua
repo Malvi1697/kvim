@@ -9,7 +9,7 @@ return {
   },
 
   -- File explorer
-  { import = 'plugins.neo-tree' },
+  { import = 'plugins.nvim-tree' },
 
   -- Navigation & Search
   { import = 'plugins.telescope' },
