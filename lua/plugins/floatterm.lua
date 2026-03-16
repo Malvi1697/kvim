@@ -21,7 +21,7 @@ local function create_float(opts)
     col = col,
     row = row,
     style = 'minimal',
-    border = 'curved',
+    border = 'rounded',
   })
 
   return buf, win
