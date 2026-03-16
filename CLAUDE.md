@@ -47,6 +47,41 @@ lsp/*.lua                   → LSP server configs (return a vim.lsp.Config tabl
 
 LSP servers, formatters, and linters are installed via Mason (`:Mason` inside nvim). They are not bundled in this repo.
 
+## Installed Plugins
+
+| Category | Plugin | Purpose | Config file |
+|----------|--------|---------|-------------|
+| UI | nvim-tree/nvim-web-devicons | File icons | init.lua (inline) |
+| UI | nvim-lualine/lualine.nvim | Status line | init.lua (inline) |
+| UI | SmiteshP/nvim-navic | Winbar breadcrumbs | navic.lua |
+| File Explorer | nvim-tree/nvim-tree.lua | File tree (+ nvim-window-picker) | nvim-tree.lua |
+| Navigation | nvim-telescope/telescope.nvim | Fuzzy finder (+ fzf-native, ui-select, live-grep-args) | telescope.lua |
+| Navigation | smoka7/hop.nvim | Easymotion-like jumps | hop.lua |
+| Navigation | folke/which-key.nvim | Key binding display | which-key.lua |
+| Navigation | nvim-pack/nvim-spectre | Search & replace | spectre.lua |
+| Treesitter | nvim-treesitter/nvim-treesitter | Syntax parsing (+ textobjects) | treesitter.lua |
+| Completion | hrsh7th/nvim-cmp | Completion engine (+ luasnip, cmp-lsp, cmp-buffer, cmp-path) | cmp.lua |
+| Completion | windwp/nvim-autopairs | Auto-close brackets | autopairs.lua |
+| Completion | kylechui/nvim-surround | Surround text objects | surround.lua |
+| LSP & Tools | mason-org/mason.nvim | LSP/formatter/linter installer | mason.lua |
+| LSP & Tools | stevearc/conform.nvim | Formatting | formatting.lua |
+| LSP & Tools | mfussenegger/nvim-lint | Linting | lint.lua |
+| Git | lewis6991/gitsigns.nvim | Git signs & hunk ops | gitsigns.lua |
+| Git | akinsho/toggleterm.nvim | LazyGit terminal | lazygit.lua |
+| Git | sindrets/diffview.nvim | Diff viewer | diffview.lua |
+| AI | zbirenbaum/copilot.lua | GitHub Copilot | copilot.lua |
+| AI | akinsho/toggleterm.nvim | Claude Code terminal | claude.lua |
+| Mini | echasnovski/mini.nvim | ai, splitjoin modules | mini.lua |
+| Tabs | akinsho/bufferline.nvim | Buffer/tab line | bufferline.lua |
+| Themes | folke/tokyonight.nvim | Theme (with persistence) | colorscheme.lua |
+| Themes | catppuccin/nvim, gruvbox, rose-pine, nightfox, material, kanagawa, kanagawa-paper, ayu, darcula, onedark, nordic, teide, jetdark (local) | 14 colorschemes | colorscheme.lua |
+| Themes | folke/todo-comments.nvim | Highlight TODO/FIXME | todo-comments.lua |
+| Themes | MeanderingProgrammer/render-markdown.nvim | Markdown rendering | render-markdown.lua |
+| Themes | iamcco/markdown-preview.nvim | Browser markdown preview | markdown-preview.lua |
+| Terminal | akinsho/toggleterm.nvim | Floating terminal | toggleterm.lua |
+| Session | folke/persistence.nvim | Session save/restore | persistence.lua |
+| Debugging | mfussenegger/nvim-dap | DAP client (+ dap-ui, dap-go, mason-nvim-dap) | debug.lua |
+
 ## Colorscheme
 
 14 themes installed. Default is `jetdark`. The last selected theme is persisted to `stdpath('data')/last_colorscheme`.
