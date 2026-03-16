@@ -45,7 +45,6 @@ return {
 
   -- Themes & Appearance
   { import = 'plugins.colorscheme' },
-  { import = 'plugins.todo-comments' },
   { import = 'plugins.navic' },
   { import = 'plugins.render-markdown' },
   { import = 'plugins.markdown-preview' },

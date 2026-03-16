@@ -1,8 +1,17 @@
--- Clear jumplist on startup so \ doesn't jump to files from previous sessions
+-- Clear jumplist + open nvim-tree on startup
 vim.api.nvim_create_autocmd('VimEnter', {
   once = true,
   callback = function()
     vim.cmd('clearjumps')
+    vim.schedule(function()
+      -- Wipe stale NvimTree buffers left by session restore
+      for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_get_name(buf):match('NvimTree_') then
+          vim.api.nvim_buf_delete(buf, { force = true })
+        end
+      end
+      pcall(function() require('nvim-tree.api').tree.open() end)
+    end)
   end,
 })
 
@@ -48,7 +57,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'WinSeparator', { fg = '#565f89', bold = true })
   end,
 })
-vim.api.nvim_set_hl(0, 'WinSeparator', { fg = '#565f89', bold = true })
 
 -- Autosave on focus loss or buffer leave
 vim.api.nvim_create_autocmd({ 'BufLeave', 'WinLeave', 'FocusLost' }, {
@@ -100,12 +108,17 @@ vim.api.nvim_create_autocmd('WinLeave', {
   end,
 })
 
--- Show navic breadcrumbs in winbar
+-- Show file path + navic breadcrumbs in winbar
 vim.api.nvim_create_autocmd({ 'BufWinEnter', 'BufWritePost', 'CursorMoved' }, {
   group = vim.api.nvim_create_augroup('navic-winbar', { clear = true }),
   callback = function()
-    if vim.bo.buftype == '' and package.loaded['nvim-navic'] and require('nvim-navic').is_available() then
-      vim.wo.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+    if vim.bo.buftype ~= '' then return end
+    local path = vim.fn.expand('%:~:.')
+    if path == '' then return end
+    if package.loaded['nvim-navic'] and require('nvim-navic').is_available() then
+      vim.wo.winbar = path .. "  %{%v:lua.require'nvim-navic'.get_location()%}"
+    else
+      vim.wo.winbar = path
     end
   end,
 })
