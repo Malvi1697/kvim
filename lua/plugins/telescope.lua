@@ -42,6 +42,6 @@ return {
     map('n', '<leader>sb', builtin.buffers, { desc = 'Buffers' })
     map('n', '<leader>sH', builtin.help_tags, { desc = 'Help' })
     map('n', '<leader>sk', builtin.keymaps, { desc = 'Keymaps' })
-    map('n', '<leader>sr', builtin.oldfiles, { desc = 'Recent files' })
+    map('n', '<leader>so', builtin.oldfiles, { desc = 'Recent (old) files' })
   end,
 }

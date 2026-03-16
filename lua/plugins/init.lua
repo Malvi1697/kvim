@@ -32,12 +32,10 @@ return {
 
   -- Git
   { import = 'plugins.gitsigns' },
-  { import = 'plugins.lazygit' },
   { import = 'plugins.diffview' },
 
   -- AI
   { import = 'plugins.copilot' },
-  { import = 'plugins.claude' },
 
   -- Mini modules
   { import = 'plugins.mini' },
@@ -53,7 +51,7 @@ return {
   { import = 'plugins.markdown-preview' },
 
   -- Terminal
-  { import = 'plugins.toggleterm' },
+  { import = 'plugins.floatterm' },
 
   -- Session
   { import = 'plugins.persistence' },

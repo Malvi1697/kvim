@@ -67,10 +67,8 @@ LSP servers, formatters, and linters are installed via Mason (`:Mason` inside nv
 | LSP & Tools | stevearc/conform.nvim | Formatting | formatting.lua |
 | LSP & Tools | mfussenegger/nvim-lint | Linting | lint.lua |
 | Git | lewis6991/gitsigns.nvim | Git signs & hunk ops | gitsigns.lua |
-| Git | akinsho/toggleterm.nvim | LazyGit terminal | lazygit.lua |
 | Git | sindrets/diffview.nvim | Diff viewer | diffview.lua |
 | AI | zbirenbaum/copilot.lua | GitHub Copilot | copilot.lua |
-| AI | akinsho/toggleterm.nvim | Claude Code terminal | claude.lua |
 | Mini | echasnovski/mini.nvim | ai, splitjoin modules | mini.lua |
 | Tabs | akinsho/bufferline.nvim | Buffer/tab line | bufferline.lua |
 | Themes | folke/tokyonight.nvim | Theme (with persistence) | colorscheme.lua |
@@ -78,7 +76,7 @@ LSP servers, formatters, and linters are installed via Mason (`:Mason` inside nv
 | Themes | folke/todo-comments.nvim | Highlight TODO/FIXME | todo-comments.lua |
 | Themes | MeanderingProgrammer/render-markdown.nvim | Markdown rendering | render-markdown.lua |
 | Themes | iamcco/markdown-preview.nvim | Browser markdown preview | markdown-preview.lua |
-| Terminal | akinsho/toggleterm.nvim | Floating terminal | toggleterm.lua |
+| Terminal | (native) | Floating terminal, LazyGit, Claude Code | floatterm.lua |
 | Session | folke/persistence.nvim | Session save/restore | persistence.lua |
 | Debugging | mfussenegger/nvim-dap | DAP client (+ dap-ui, dap-go, mason-nvim-dap) | debug.lua |
 

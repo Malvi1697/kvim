@@ -9,7 +9,6 @@ map('t', '<C-h>', '<C-\\><C-n><C-w><C-h>', { desc = 'Move focus to the left wind
 map('t', '<C-l>', '<C-\\><C-n><C-w><C-l>', { desc = 'Move focus to the right window' })
 map('t', '<C-j>', '<C-\\><C-n><C-w><C-j>', { desc = 'Move focus to the lower window' })
 map('t', '<C-k>', '<C-\\><C-n><C-w><C-k>', { desc = 'Move focus to the upper window' })
-map('t', '<C-\\>', '<C-\\><C-n><cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 map('n', '<leader>tt', '<cmd>terminal<CR>', { desc = 'Terminal in current window' })
 map('n', '<leader>ts', '<cmd>split | terminal<CR>', { desc = 'Terminal in horizontal split' })
 map('n', '<leader>tv', '<cmd>vsplit | terminal<CR>', { desc = 'Terminal in vertical split' })
