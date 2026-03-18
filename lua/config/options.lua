@@ -17,7 +17,7 @@ vim.o.smartcase = true
 vim.o.signcolumn = 'yes'
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
-vim.o.laststatus = 3
+vim.o.laststatus = 2
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.list = true
@@ -38,11 +38,10 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.o.winborder = 'rounded'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = false,
   signs = true,
   underline = true,
   update_in_insert = false,
   severity_sort = true,
-})
-
+}

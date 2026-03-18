@@ -37,6 +37,8 @@ map('n', 'S', '<cmd>HopLine<cr>')
 
 map('n', '\\', '<C-o>', { desc = 'Jump back to previous location' })
 map('n', '|', '<C-i>', { desc = 'Jump forward to next location' })
+map('n', '<C-o>', '<Nop>')
+map('n', '<C-i>', '<Nop>')
 
 map('n', 'K', vim.lsp.buf.hover, { desc = 'LSP Hover' })
 map('n', 'gd', vim.lsp.buf.definition, { desc = 'Goto definition' })
